@@ -122,7 +122,7 @@ class MyFavCard extends StatelessWidget {
   }
 }
 
-void main() => runApp(MaterialApp(
+void main() { runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.white,
@@ -151,7 +151,8 @@ void main() => runApp(MaterialApp(
         ),
       ),
     )
-);
+  );
+}
 
 
 //Part 3
@@ -233,7 +234,7 @@ class _MyFavCardState extends State<MyFavCard> {
   }
 }
 
-void main() => runApp(MaterialApp(
+void main() { runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.white,
@@ -263,3 +264,4 @@ void main() => runApp(MaterialApp(
       ),
     )
 );
+}

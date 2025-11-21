@@ -120,16 +120,22 @@ class _ScoreCardState extends State<ScoreCard> {
               color: Colors.grey[300],
               borderRadius: BorderRadius.circular(8),
             ),
-            child: FractionallySizedBox(
-              alignment: Alignment.centerLeft,
-              widthFactor: progress,
-              child: AnimatedContainer(
-                duration: const Duration(milliseconds: 300),
-                decoration: BoxDecoration(
-                  color: getProgressColor(),
-                  borderRadius: BorderRadius.circular(10),
-                ),
-              ),
+            child: LayoutBuilder(
+              builder: (context, constraints) {
+                double barWidth = (score / 10) * constraints.maxWidth;
+                return Stack(
+                  children: [
+                    Container(
+                      height: double.infinity,
+                      width: barWidth,
+                      decoration: BoxDecoration(
+                        color: Colors.green,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                    )
+                  ],
+                );
+              },
             ),
           ),
         ],
